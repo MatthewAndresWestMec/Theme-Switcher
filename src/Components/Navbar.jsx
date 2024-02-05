@@ -1,15 +1,26 @@
-import React from 'react'
-import ThemeContext from '../Theme/ThemeContext'
+import React, { useContext } from 'react';
+import { ThemeContext } from '../Theme/ThemeContext';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Navbar = () => {
+  const { changeTheme, theme } = useContext(ThemeContext);
   return (
-    
-    <div><ThemeContext/>
-        <h1>Navbar</h1>
+    <nav className={`navbar ${theme}`}>
+      <h1>Matt's Page</h1>
+      <div className='theme-toggle' onClick={changeTheme}>
+        {theme === 'light' ? (
+          <FontAwesomeIcon icon={faSun} className='icon' />
+        ) : (
+          <FontAwesomeIcon icon={faMoon} className='icon' />
+        )}
+      </div>
+      <div className='links'>
+        <a>About</a>
+        <a>Gallery</a>
+      </div>
+    </nav>
+  );
+};
 
-<button onClick={changeTheme}>Change Theme</button>
-    </div>
-    
-  )
-}
-
-export default Navbar
+export default Navbar;

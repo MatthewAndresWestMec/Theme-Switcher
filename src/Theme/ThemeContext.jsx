@@ -1,19 +1,20 @@
-import  { createContext,useState, useContext } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
 const ThemeContext = createContext();
 
-const ContextAPI = ({children}) => {
-    const [theme, setTheme] = useState(data);
+const ContextAPI = ({ children }) => {
+  const [currentTheme, setCurrentTheme] = useState(false);
 
-    const changeTheme = () => {
-        setTheme();
-    };
+  const changeTheme = () => {
+    setCurrentTheme((current) => !current);
+  };
 
-    return (
-        <ThemeContext.Provider value={{ changeTheme, theme }}>
-            {children}
-        </ThemeContext.Provider>
-    );
+  return (
+    <ThemeContext.Provider
+      value={{ changeTheme, theme: currentTheme ? 'dark' : 'light' }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
 
-export default ContextAPI;
+export { ThemeContext, ContextAPI };

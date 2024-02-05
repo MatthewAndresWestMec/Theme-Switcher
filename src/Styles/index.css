@@ -11,3 +11,76 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.light{
+  background-color: white !important;
+  color:black !important;
+}
+.dark {
+  background-color: black !important;
+  color:white !important;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.theme-toggle{
+  text-align: center;
+}
+nav {
+  padding: 5px 20px;
+  box-shadow: 0 0 5px #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+    z-index: 2;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links a {
+  margin: 0 1vh 0 1vh;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 2em !important;
+}
+navbar{
+  z-index: 1;
+}
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40vh 0;
+  /* Adjust to take up 80vh */
+  position: relative;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-down {
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateY(-50%, 0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-down:hover {
+  transform: translateY(5px);
+}

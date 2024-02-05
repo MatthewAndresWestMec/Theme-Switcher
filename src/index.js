@@ -1,11 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
+import './Styles/index.css';
+import './Styles/App.css';
 import App from './App';
+import { ContextAPI } from './Theme/ThemeContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const root = document.getElementById('root');
+
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <ThemeContext> <App /></ThemeContext>
+    <ContextAPI>
+      <App />
+    </ContextAPI>
   </React.StrictMode>
 );
