@@ -22,7 +22,7 @@ const MainContent = () => {
             <button className={`gallery-button ${theme}`}>
               <FontAwesomeIcon icon={faLink} />
             </button>
-              <p className={`gallery-subject ${theme}`}>"Crafting a unique homepage akin to Google, my project offers a personalized digital gateway, combining sleek design and efficient functionality to enhance your online experience. Your internet, your way."</p>          
+              <p className={` ${theme}`}>"Crafting a unique homepage akin to Google, my project offers a personalized digital gateway, combining sleek design and efficient functionality to enhance your online experience. Your internet, your way."</p>          
           </div>
         </li>
 
