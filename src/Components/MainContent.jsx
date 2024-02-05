@@ -17,14 +17,16 @@ const MainContent = () => {
             className='gallery-image'
           />
           <div className={`gallery-details ${theme}`}>
-            <h2 className={`gallery-title ${theme}`}>Image details</h2>
+            <h2 className={`gallery-title ${theme}`}>My Project</h2>
             <button className={`gallery-button ${theme}`}>
               <FontAwesomeIcon icon={faLink} />
             </button>
             <ul className={`gallery-list ${theme}`}>
-              <li className={`gallery-subject ${theme}`}>Flower</li>
-              <li className={`gallery-author ${theme}`}>@anna_c_wilhelm</li>
-              <li className={`gallery-place ${theme}`}>Austria</li>
+              <li className={`gallery-subject ${theme}`}>The Thingy</li>
+              <li className={`gallery-author ${theme}`}>
+                <a>Link to project</a>
+              </li>
+              <li className={`gallery-place ${theme}`}>HTML,SCSS,REACT,JS</li>
             </ul>
           </div>
         </li>
