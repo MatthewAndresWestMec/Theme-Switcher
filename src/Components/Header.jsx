@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className={`header ${theme}`}>
-      <h1 className={`title ${theme}`}>My Super Cool Projects</h1>
+      <h1 className={`title ${theme}`}>My Top Three Favorite Games</h1>
       <div className={`scroll-down ${theme}`} onClick={scrollToContent}>
         <FontAwesomeIcon icon={faArrowDown} />
       </div>
