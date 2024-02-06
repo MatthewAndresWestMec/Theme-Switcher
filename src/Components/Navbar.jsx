@@ -4,6 +4,13 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = () => {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
   const { changeTheme, theme } = useContext(ThemeContext);
   return (
     <nav className={`navbar ${theme}`}>
@@ -16,8 +23,15 @@ const Navbar = () => {
         )}
       </div>
       <div className='links'>
-        <a>About</a>
-        <a>Gallery</a>
+        <a
+          href='https://github.com/MatthewAndresWestMec'
+          target='_blank'
+          rel='noopener noreferrer'>
+          Github
+        </a>
+        <a href='#' onClick={scrollToBottom}>
+          Gallery
+        </a>
       </div>
     </nav>
   );

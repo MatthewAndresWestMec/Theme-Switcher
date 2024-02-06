@@ -4,22 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
-  const { theme } = useContext(ThemeContext);
-
-  const scrollToContent = () => {
-    const contentSection = document.getElementById('contentSection');
-    if (contentSection) {
-      window.scrollTo({
-        top: contentSection.offsetTop,
-        behavior: 'smooth',
-      });
-    }
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
   };
+
+  const { theme } = useContext(ThemeContext);
 
   return (
     <header className={`header ${theme}`}>
       <h1 className={`title ${theme}`}>My Top Three Favorite Games</h1>
-      <div className={`scroll-down ${theme}`} onClick={scrollToContent}>
+      <div className={`scroll-down ${theme}`} onClick={scrollToBottom}>
         <FontAwesomeIcon icon={faArrowDown} />
       </div>
     </header>

@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from 'react';
 const ThemeContext = createContext();
 
 const ContextAPI = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState(true);
 
   const changeTheme = () => {
     setCurrentTheme((current) => !current);
